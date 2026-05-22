@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-entrega / Pizzeria Escalante</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css"
+</head>
+<body>
+    <header class="header">
+        <div id="inicio" class="inicio>
+            <a href="#" class="icono-link">
+                <img src="./assets/img/icono.png" alt="iconopizza" class="icono">
+            </a>
+            <h1 class="titulo">
+                Pizzeria Escalante
+            </h1>
+            <h2 class="titulo-2">
+                Sean bienvenidos a una nueva experiencia de sabor al estilo napolitano
+            </h2>
+        </div>
+        
+        <div>
+        <nav class="top-nav">
+            <ul class="top-nav-list">
+                <li class="top-nav-item">
+                    <a href="#" class="top-nav-link">
+                        Logueo
+                    </a>
+                </li> 
+                <li class="top-nav-item">
+                    <a href="#Registro" class="top-nav-link">
+                        Registro
+                    </a>
+                </li>
+                <li class="top-nav-item">
+                    <a href="./pages/carrito.html" class="top-nav-link">
+                        <img src="./assets/img/carrito.png" alt="iconocarrito" class="carrito">
+                    </a>
+                </li>
+            </ul
+        </nav>
+        </div>
+    </header>
+    <nav class="nav">
+        <ul class="lista">
+            <li class="lista-item">
+                <a href="#inicio" class="lista-link">
+                    Inicio
+                </a>
+            </li>
+            <li class="lista-item">
+                <a href="#productos" class="lista-link">
+                    Productos
+                </a>
+            </li>
+            <li class="lista-item">
+                <a href="#reseñas" class="lista-link">
+                    Reseñas
+                </a>
+            </li>
+            <li class="lista-item">
+                <a href="#contactos" class="lista-link">
+                    Contactos
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
+        <section id="productos" class="seccion-productos">
+            <h2 class="seccion-titulo">
+                Productos destacados
+            </h2>
+            <div class="productos">
+                <article class="carta-producto">
+                    <img src="./assets/img/pizza5.jpg" alt="pizzamuzza" class="imagen-producto">
+                    <div class="contenido-producto">
+                        <p class="nombre-producto"> 
+                            Pizza de Muzzarella
+                        </p>
+                        <p class="descripcion-producto">
+                            Masa con salsa de tomates con queso muzzarella y reggianito
+                        </p>
+                        <p class="precio">
+                            <span> Precio: </span> $6000
+                        </p>
+                        <button type="button" class="boton-producto">
+                            Encargar
+                        </button>
+                    </div>
+                </article>
+                <article class="carta-producto">
+                    <img src="./assets/img/pizza4.jpg" alt="fugazzeta" class="imagen-producto">
+                    <div class="contenido-producto">
+                        <p class="nombre-producto"> 
+                            Fugazzeta
+                        </p>
+                        <p class="descripcion-producto">
+                            Masa con cebolla y queso muzzarella 
+                        </p>
+                        <p class="precio">
+                            <span> Precio: </span> $7000
+                        </p>
+                        <button type="button" class="boton-producto">
+                            Encargar
+                        </button>
+                    </div>
+                </article>
+                <article class="carta-producto">
+                    <img src="./assets/img/pizza1.jpg" alt="jamon-morron" class="imagen-producto">
+                    <div class="contenido-producto">
+                        <p class="nombre-producto"> 
+                            Pizza de jamón y morron
+                        </p>
+                        <p class="descripcion-producto">
+                            Masa con salsa de tomates, muzzarella, jamón cocido y morrones asados
+                        </p>
+                        <p class="precio">
+                            <span> Precio: </span> $8000
+                        </p>
+                        <button type="button" class="boton-producto">
+                            Encargar
+                        </button>
+                    </div>
+                </article>
+            </div>    
+        <section id="reseñas" class="seccion-reseñas">
+
+            <h2 class="titulo-reseñas">
+                Las palabras de nuestros clientes
+            </h2>
+
+            <div class="reseñas-grid">
+
+                <section class="card">
+                    <h3 class="nombre">
+                        Graciela P.
+                    </h3>
+                    <p class="opinion">
+                        "Muy ricas pizzas. La masa tiene un gusto especial"
+                    </p>
+                </section>
+                <section class="card">
+                    <h3 class="nombre">
+                        Dante E.
+                    </h3>
+                    <p class="opinion">
+                        "¡¡No solamente son ricas, también son económicas!!"
+                    </p>
+                </section>
+                <section class="card">
+                    <h3 class="nombre">
+                        Ana T.
+                    </h3>
+                    <p class="opinion">
+                        "Me las recomendó una amiga, tienen un sabor único"
+                    </p>
+                </section>
+            </div>
+            <section id="contactos" class="contactos">
+                <h2 class="consultas">
+                    Dejanos tus consultas. Te vamos a responder en la brevedad
+                </h2>
+                <form action="https://formspree.io/f/mbdbjydw" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre" class="form-label">
+                            Nombre
+                        </label>
+                        <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            Correo electrónico
+                        </label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Tu email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje" class="form-label">
+                            Mensaje
+                        </label>
+                        <textarea id="mensaje" name="mensaje" rows="4" cols="50" class="form-textarea" placeholder="Escribi tu consulta"required></textarea>
+                    </div>
+                        <button type="submit" class="boton">Enviar consulta</button>
+                </form>
+                
+                <ul class="data">
+                    <li>Calle antigua 7823, CABA</li>
+                    <li>01155667789</li>
+                    <li>pizzeriaescalante.1759@gmail.com </li>
+                </ul>
+            </section>
+    </main>
+    <footer class="footer">        
+        <p class="derechos-footer">
+            ©2026 Pizzeria Escalante. Todos los derechos reservados
+        </p>
+    </footer>
+</body>
+</html>
