@@ -1,0 +1,1 @@
+La página "Pizzería Escalante" fue creada para que el cliente pueda visualizar diferentes pedidos y solicitarlos mediante la misma
