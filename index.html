@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-entrega / Pizzeria Escalante</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css"
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/main.js"></script>
+    <script src="./js/carrito.js" defer></script>
 </head>
 <body>
     <header class="header">
-        <div id="inicio" class="inicio>
-            <a href="#" class="icono-link">
+        <div id="inicio" class="inicio">
+            <a href="#" class="inicio-link">
                 <img src="./assets/img/icono.png" alt="iconopizza" class="icono">
             </a>
             <h1 class="titulo">
@@ -21,27 +23,26 @@
             </h2>
         </div>
         
-        <div>
         <nav class="top-nav">
             <ul class="top-nav-list">
                 <li class="top-nav-item">
-                    <a href="#" class="top-nav-link">
+                    <a href="./pages/login.html" class="top-nav-link">
                         Logueo
                     </a>
                 </li> 
                 <li class="top-nav-item">
-                    <a href="#Registro" class="top-nav-link">
+                    <a href="./pages/registro.html" class="top-nav-link">
                         Registro
                     </a>
                 </li>
                 <li class="top-nav-item">
                     <a href="./pages/carrito.html" class="top-nav-link">
                         <img src="./assets/img/carrito.png" alt="iconocarrito" class="carrito">
+                        <div class="count"></div>
                     </a>
                 </li>
             </ul
         </nav>
-        </div>
     </header>
     <nav class="nav">
         <ul class="lista">
@@ -72,56 +73,59 @@
             <h2 class="seccion-titulo">
                 Productos destacados
             </h2>
-            <div class="productos">
-                <article class="carta-producto">
-                    <img src="./assets/img/pizza5.jpg" alt="pizzamuzza" class="imagen-producto">
-                    <div class="contenido-producto">
-                        <p class="nombre-producto"> 
+            <div id="listaproductos"   class="productos">
+                <!-- <article class="cartaproducto">
+                    <img src="./assets/img/pizza5.jpg" alt="pizzamuzza" class="imagenproducto">
+                    <div class="contenidoproducto">
+                        <p class="nombreproducto"> 
                             Pizza de Muzzarella
                         </p>
-                        <p class="descripcion-producto">
+                        <p class="descripcionproducto">
                             Masa con salsa de tomates con queso muzzarella y reggianito
                         </p>
-                        <p class="precio">
-                            <span> Precio: </span> $6000
+                        <p class="precioproducto">
+                            <span> Precio: </span> 
+                            <span class="precio">$6000</span>
                         </p>
-                        <button type="button" class="boton-producto">
+                        <button type="button" class="Encargar">
                             Encargar
                         </button>
                     </div>
                 </article>
-                <article class="carta-producto">
-                    <img src="./assets/img/pizza4.jpg" alt="fugazzeta" class="imagen-producto">
-                    <div class="contenido-producto">
-                        <p class="nombre-producto"> 
+                <article class="cartaproducto">
+                    <img src="./assets/img/pizza4.jpg" alt="fugazzeta" class="imagenproducto">
+                    <div class="contenidoproducto">
+                        <p class="nombreproducto"> 
                             Fugazzeta
                         </p>
-                        <p class="descripcion-producto">
+                        <p class="descripcionproducto">
                             Masa con cebolla y queso muzzarella 
                         </p>
-                        <p class="precio">
-                            <span> Precio: </span> $7000
+                        <p class="precioproducto">
+                            <span> Precio: </span> 
+                            <span class="precio">$7000</span>
                         </p>
-                        <button type="button" class="boton-producto">
+                        <button type="button" class="Encargar">
                             Encargar
                         </button>
                     </div>
                 </article>
-                <article class="carta-producto">
-                    <img src="./assets/img/pizza1.jpg" alt="jamon-morron" class="imagen-producto">
-                    <div class="contenido-producto">
-                        <p class="nombre-producto"> 
+                <article class="cartaproducto">
+                    <img src="./assets/img/pizza1.jpg" alt="jamon-morron" class="imagenproducto">
+                    <div class="contenidoproducto">
+                        <p class="nombreproducto"> 
                             Pizza de jamón y morron
                         </p>
-                        <p class="descripcion-producto">
+                        <p class="descripcionproducto">
                             Masa con salsa de tomates, muzzarella, jamón cocido y morrones asados
                         </p>
-                        <p class="precio">
-                            <span> Precio: </span> $8000
+                        <p class="precioproducto">
+                            <span> Precio: </span>
+                            <span class="precio">$8000</span>
                         </p>
-                        <button type="button" class="boton-producto">
+                        <button type="button" class="Encargar">
                             Encargar
-                        </button>
+                        </button> -->
                     </div>
                 </article>
             </div>    
@@ -198,5 +202,6 @@
             ©2026 Pizzeria Escalante. Todos los derechos reservados
         </p>
     </footer>
+    
 </body>
 </html>
