@@ -39,6 +39,7 @@ body{
     position: fixed;
     z-index: 3000;
 }
+
 .titulo{
     font-size: 3rem;
     margin-left: 2.5rem;
@@ -61,7 +62,8 @@ body{
     text-decoration: none;
     color: darkolivegreen;
     font-weight: 600;
-    transition: color 0.4s ease;    
+    transition: color 0.4s ease;
+    
 
     &:hover{
         color: olive;
@@ -70,9 +72,22 @@ body{
 .carrito{
     width: 1.5rem;
     height: 1.5rem;
+    position: relative; 
+    
 }
+
 .count{
-    position: absolute;
+
+position: absolute;
+top: 0;
+left: 94.5%;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 2px;
 }
 
 .nav{
@@ -309,7 +324,10 @@ body{
         flex-direction: column;
         gap: 1.5rem;
 }
-
+    .count{
+        left: 15rem;
+        top: 17rem
+    }
 @media (max-width: 768px) {
 
     html {
@@ -320,7 +338,10 @@ body{
         flex-wrap: wrap;
         gap: 1rem;
     }
-
+    .count{
+        left: 14.8rem;
+        top: 16.8rem;
+    }
     section {
         padding: 4rem 5%;
     }
@@ -346,7 +367,10 @@ body{
     .inicio {
         flex-direction: column;
     }
-
+    .count{
+        left: 13rem;
+        top: 15.5rem;
+    }
     .titulo {
         font-size: 1.6rem;
     }

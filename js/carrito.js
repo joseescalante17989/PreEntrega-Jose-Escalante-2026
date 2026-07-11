@@ -67,7 +67,7 @@ const mostrarproductos = () => {
 function botonfinalizar(){
     alert("Gracias por su compra!!!")
     carrito=[];
-    total=0;
+    preciototal=0;
     count=0;
     localStorage.removeItem('productarticle');
     localStorage.removeItem('totalPrice');
@@ -113,7 +113,13 @@ function crearproductos () {
         const precioproducto = article.querySelector('.precioproducto .precio').textContent.slice(1);
 
         button.addEventListener('click', () => {
-                    const product = {
+        const nombre = nombreproducto;
+        const productoexiste = carrito.find (p => p.nombre === nombre);
+        if (productoexiste){
+            productoexiste.count+= 1;
+            productoexiste.preciototal = productoexiste.precio*productoexiste.count;
+        } else {
+            const product = {
                         nombre : nombreproducto,
                         descripcion : descripcionproducto,
                         precio : precioproducto,
@@ -121,8 +127,11 @@ function crearproductos () {
                     };
 
                     carrito.push(product);
-                    preciototal += parseFloat(product.precio);
-                    count += 1;
+        }
+        
+                    
+                    preciototal = carrito.reduce((acc, item) => acc + (item.precio * item.count), 0);
+                    count = carrito.reduce((acc, item) => acc + item.count, 0);
 
                     localStorage.setItem('productarticle', JSON.stringify(carrito));
                     localStorage.setItem('totalPrice', preciototal.toFixed(2));
@@ -146,3 +155,32 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarproductos();
     }
 });
+
+// button.addEventListener('click', () => {
+//     const nombre = nombreproducto;
+//     // Buscar si el producto ya está en el carrito
+//     const productoExistente = carrito.find(p => p.nombre === nombre);
+
+//     if (productoExistente) {
+//         productoExistente.count += 1;
+//         productoExistente.precioTotal = productoExistente.precio * productoExistente.count; 
+//         // Nota: Ajusta la lógica según si guardas precio unitario o total por fila
+//     } else {
+//         const product = {
+//             nombre : nombre,
+//             descripcion : descripcionproducto,
+//             precio : parseFloat(precioproducto),
+//             count : 1, 
+//         };
+//         carrito.push(product);
+//     }
+
+//     // Recalcular totales globales recorriendo el carrito para evitar errores de acumulación
+//     preciototal = carrito.reduce((acc, item) => acc + (item.precio * item.count), 0);
+//     count = carrito.reduce((acc, item) => acc + item.count, 0);
+
+//     localStorage.setItem('productarticle', JSON.stringify(carrito));
+//     localStorage.setItem('totalPrice', preciototal.toFixed(2));
+//     localStorage.setItem('totalCount', count);
+//     document.querySelector('.count').textContent = count;
+// });
