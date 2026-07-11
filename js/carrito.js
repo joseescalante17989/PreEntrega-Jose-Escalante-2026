@@ -156,31 +156,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// button.addEventListener('click', () => {
-//     const nombre = nombreproducto;
-//     // Buscar si el producto ya está en el carrito
-//     const productoExistente = carrito.find(p => p.nombre === nombre);
-
-//     if (productoExistente) {
-//         productoExistente.count += 1;
-//         productoExistente.precioTotal = productoExistente.precio * productoExistente.count; 
-//         // Nota: Ajusta la lógica según si guardas precio unitario o total por fila
-//     } else {
-//         const product = {
-//             nombre : nombre,
-//             descripcion : descripcionproducto,
-//             precio : parseFloat(precioproducto),
-//             count : 1, 
-//         };
-//         carrito.push(product);
-//     }
-
-//     // Recalcular totales globales recorriendo el carrito para evitar errores de acumulación
-//     preciototal = carrito.reduce((acc, item) => acc + (item.precio * item.count), 0);
-//     count = carrito.reduce((acc, item) => acc + item.count, 0);
-
-//     localStorage.setItem('productarticle', JSON.stringify(carrito));
-//     localStorage.setItem('totalPrice', preciototal.toFixed(2));
-//     localStorage.setItem('totalCount', count);
-//     document.querySelector('.count').textContent = count;
-// });
