@@ -42,6 +42,7 @@ const mostrarproductos = () => {
                 <th>Nombre del Producto</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
+                <th>Total</th>
             </tr>
         </thead>
         `;
@@ -54,12 +55,22 @@ const mostrarproductos = () => {
                         <td>${producto.nombre}</td>
                         <td>$${producto.precio}</td>
                         <td>${producto.count}</td>
+                        <td>$${producto.subtotal}</td>
                     </tr>
             `;
         });
         cuerpo += '</tbody>';
+
+        let final =` 
+        <tbody style="font-weight: bold;">
+            <tr>
+                <td colspan= "3">Precio Final</td>
+                <td>$${preciototal}</td>
+            </tr>
+        </tbody>
+        `;
         
-        tabla.innerHTML = encabezado + cuerpo;
+        tabla.innerHTML = encabezado + cuerpo + final;
 
         carritoproducto.appendChild(tabla);
 };
@@ -117,13 +128,14 @@ function crearproductos () {
         const productoexiste = carrito.find (p => p.nombre === nombre);
         if (productoexiste){
             productoexiste.count+= 1;
-            productoexiste.preciototal = productoexiste.precio*productoexiste.count;
+            
         } else {
             const product = {
                         nombre : nombreproducto,
                         descripcion : descripcionproducto,
                         precio : precioproducto,
                         count : 1, 
+                        
                     };
 
                     carrito.push(product);
@@ -156,31 +168,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// button.addEventListener('click', () => {
-//     const nombre = nombreproducto;
-//     // Buscar si el producto ya está en el carrito
-//     const productoExistente = carrito.find(p => p.nombre === nombre);
-
-//     if (productoExistente) {
-//         productoExistente.count += 1;
-//         productoExistente.precioTotal = productoExistente.precio * productoExistente.count; 
-//         // Nota: Ajusta la lógica según si guardas precio unitario o total por fila
-//     } else {
-//         const product = {
-//             nombre : nombre,
-//             descripcion : descripcionproducto,
-//             precio : parseFloat(precioproducto),
-//             count : 1, 
-//         };
-//         carrito.push(product);
-//     }
-
-//     // Recalcular totales globales recorriendo el carrito para evitar errores de acumulación
-//     preciototal = carrito.reduce((acc, item) => acc + (item.precio * item.count), 0);
-//     count = carrito.reduce((acc, item) => acc + item.count, 0);
-
-//     localStorage.setItem('productarticle', JSON.stringify(carrito));
-//     localStorage.setItem('totalPrice', preciototal.toFixed(2));
-//     localStorage.setItem('totalCount', count);
-//     document.querySelector('.count').textContent = count;
-// });
