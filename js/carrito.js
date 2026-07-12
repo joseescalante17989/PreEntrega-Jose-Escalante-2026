@@ -122,13 +122,14 @@ function crearproductos () {
         const nombreproducto = article.querySelector('.nombreproducto').textContent;
         const descripcionproducto = article.querySelector('.descripcionproducto').textContent;
         const precioproducto = article.querySelector('.precioproducto .precio').textContent.slice(1);
+        
 
         button.addEventListener('click', () => {
         const nombre = nombreproducto;
         const productoexiste = carrito.find (p => p.nombre === nombre);
         if (productoexiste){
             productoexiste.count+= 1;
-            
+            productoexiste.total = productoexiste.precio*productoexiste.count;
         } else {
             const product = {
                         nombre : nombreproducto,
